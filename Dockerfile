@@ -7,7 +7,7 @@ RUN wget https://github.com/nilsteampassnet/TeamPass/archive/fix_2.1.24.zip
 RUN unzip fix_2.1.24.zip
 RUN ln -s /opt/TeamPass-fix_2.1.24  /var/www/html/teampass2
 RUN apt-get -y install php5-mcrypt
-RUN wget  "https://github.com/mukendra/teampass/blob/master/php.ini" /opt
+RUN wget  https://github.com/mukendra/teampass/blob/master/php.ini
 RUN cp /opt/php.ini /etc/php5/apache2/php.ini
 RUN php5enmod mcrypt
 RUN chown -R www-data:www-data /var/www/html/teampass2
